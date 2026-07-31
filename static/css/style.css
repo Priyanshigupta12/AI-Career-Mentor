@@ -84,3 +84,48 @@ button{
     background:#333;
 
 }
+.features{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    margin:80px;
+    flex-wrap:wrap;
+}
+
+.card{
+    width:300px;
+    background:white;
+    padding:25px;
+    border-radius:12px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.1);
+    text-align:center;
+}
+
+.card h2{
+    color:#0f62fe;
+    margin-bottom:15px;
+}
+
+.card p{
+    color:#555;
+}
+.upload{
+    text-align:center;
+    margin:80px;
+}
+
+.upload h2{
+    color:#0f62fe;
+    margin-bottom:20px;
+}
+
+input{
+    padding:10px;
+}
+footer{
+    background:#0f62fe;
+    color:white;
+    text-align:center;
+    padding:20px;
+    margin-top:60px;
+}
