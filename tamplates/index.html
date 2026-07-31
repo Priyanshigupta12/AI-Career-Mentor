@@ -1,17 +1,48 @@
-<!DOCTYPE.html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>AI Career Mentor</title>
-    <link rel="stylesheet"href="{{url_for('satic',filename='css/style.css')}}">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
+
 <body>
-<h1>AI Career Mentor</h1>
-<p>Your Personal AI Career Coach</p>
 
-<buttom>Get Started</buttom>
+    <nav>
 
-<buttom>Upload Resume</buttom>
+        <h2>AI Career Mentor</h2>
 
+        <ul>
+            <li>Home</li>
+            <li>Features</li>
+            <li>About</li>
+            <li>Contact</li>
+        </ul>
+
+    </nav>
+
+    <section class="hero">
+
+        <h1>Your Personal AI Career Coach</h1>
+
+        <p>
+            Get career guidance, resume analysis,
+            interview preparation and learning roadmap
+            powered by Artificial Intelligence.
+        </p>
+
+        <button>Analyze Resume</button>
+
+        <button class="secondary">
+            Career Roadmap
+        </button>
+
+    </section>
 
 </body>
+
 </html>
