@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Analysis</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/result.css') }}">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>📄 Resume Analysis Result</h1>
+
+        <h2 class="score">📊 Resume Score: {{ score }}%</h2>
+
+        <div class="progress">
+            <div class="progress-bar" style="width: {{ score }}%;">
+                {{ score }}%
+            </div>
+        </div>
+
+        <hr>
+
+        <h2>✅ Skills Found</h2>
+
+        {% if skills %}
+        <ul class="skills">
+            {% for skill in skills %}
+            <li>{{ skill }}</li>
+            {% endfor %}
+        </ul>
+        {% else %}
+        <p>No skills found.</p>
+        {% endif %}
+
+        <hr>
+
+        <h2>❌ Missing Skills</h2>
+
+        {% if missing %}
+        <ul class="missing">
+            {% for skill in missing %}
+            <li>{{ skill }}</li>
+            {% endfor %}
+        </ul>
+        {% else %}
+        <p>No missing skills.</p>
+        {% endif %}
+
+        <hr>
+
+        <div class="card">
+
+            <h2>💡 AI Suggestion</h2>
+
+            <p>Based on your skills, we recommend you for the role of <strong>{{ career }}</strong>.</p>
+
+            {% if score >= 80 %}
+                <p>🎉 Excellent Resume! Keep improving your projects and portfolio.</p>
+
+            {% elif score >= 50 %}
+                <p>👍 Good Resume! Add the missing skills to make it stronger.</p>
+
+            {% else %}
+                <p>📚 Your resume needs improvement. Learn the missing skills and update your resume.</p>
+
+            {% endif %}
+
+        </div>
+
+        <br>
+
+        <a href="/">⬅ Back to Home</a>
+
+    </div>
+    <hr>
+
+<h2>📚 Learning Roadmap</h2>
+
+<div class="card">
+
+    <ol>
+        {% for step in roadmap %}
+            <li>{{ step }}</li>
+        {% endfor %}
+    </ol>
+
+</div>
+
+</body>
+</html>

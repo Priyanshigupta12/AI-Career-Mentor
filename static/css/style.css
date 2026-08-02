@@ -115,7 +115,7 @@ button{
 }
 
 .upload h2{
-    color:#0f62fe;
+    color:#6d3737;
     margin-bottom:20px;
 }
 
@@ -123,8 +123,8 @@ input{
     padding:10px;
 }
 footer{
-    background:#0f62fe;
-    color:white;
+    background:#0e2144;
+    color:rgb(150, 141, 141);
     text-align:center;
     padding:20px;
     margin-top:60px;
